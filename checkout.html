@@ -7,10 +7,81 @@
   </head>
   <body>
     <main>
-      <section id="shoppingbagen"></section>
-      <section id="personopplysninger"></section>
-      <section id="levering"></section>
-      <section id="betaling"></section>
+      <section id="shoppingbagen">
+        <h2>Handlekurv</h2>
+        <ul>
+          <li>
+            <article>
+              <img src="https://picsum.photos/200/300" alt="" />
+              <h3>Produktnavn</h3>
+              <p>Pris: 852NOK</p>
+              <p>Farge: Rød</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://picsum.photos/200/300" alt="" />
+              <h3>Produktnavn</h3>
+              <p>Pris: 852NOK</p>
+              <p>Farge: Rød</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="https://picsum.photos/200/300" alt="" />
+              <h3>Produktnavn</h3>
+              <p>Pris: 852NOK</p>
+              <p>Farge: Rød</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section id="personopplysninger">
+        <h2>Personopplysninger</h2>
+        <form action="">
+          <label for="fornavn">Fornavn:</label><input type="text" />
+          <label for="etternavn">Etternavn:</label><input type="text" />
+          <label for="adresse">Gateadresse</label><input type="text" />
+          <label for="postnummer"></label><input type="text" id="postnummer" />
+          <button>Lagre</button>
+          <button>Avbryt</button>
+        </form>
+      </section>
+      <section id="levering">
+        <h2>Levering</h2>
+        <form>
+          <label for="ekspress-hjem">Ekspresslevering hjem</label>
+          <input id="ekspress-hjem" type="radio" />
+          <label for="ekspress-pakke">Ekspresslevering utleveringssted</label>
+          <input id="ekspress-pakke" type="radio" />
+          <label for="standard">Standard hjemmelevering</label>
+          <input id="standard" type="radio" />
+        </form>
+      </section>
+      <section id="betaling">
+        <h2>Betaling</h2>
+        <form>
+          <label for="kortnummer">Kortnummer</label>
+          <input type="text" id="kortnummer" />
+          <label for="utlopsdato">Utløpsdato</label>
+          <input type="text" id="utlopsdato" />
+          <label for="cvv">CVC/CVV</label>
+          <input type="text" id="cvv" />
+          <p>Å betale inkludert mva.</p>
+          <p>2 556.00 NOK</p>
+          <button>Fullfør kjøp</button>
+          <p>
+            Du bekrefter herved at opplysningene og dokumentene du har oppgitt
+            er korrekte og fullstendige. Leverandøren forbeholder seg retten til
+            å heve eller avslutte avtaleforholdet dersom det foreligger uriktige
+            eller ufullstendige opplysninger.
+          </p>
+          <label for="terms">Ja, jeg godrar vilkårene</label>
+          <input id="terms" type="checkbox" />
+          <label for="newsletter">Ja takk! send nyhetsbrev til meg</label>
+          <input type="checkbox" id="newsletter" />
+        </form>
+      </section>
     </main>
   </body>
 </html>
