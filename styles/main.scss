@@ -15,10 +15,7 @@ a {
   text-decoration: none;
   color: black;
 }
-header {
-  display: flex;
-  flex-direction: column;
-}
+
 input,
 button {
   border: 1px solid black;
@@ -56,7 +53,7 @@ section {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
   }
   button {
     background-color: transparent;
@@ -76,9 +73,12 @@ section {
 }
 
 #popular-categories {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  ul {
+    width: 100%;
+  }
   article {
     display: flex;
     justify-content: center;
@@ -92,7 +92,7 @@ section {
   grid-template-columns: 1fr;
   gap: 1rem;
   article {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
     img {
       max-width: 150px;
@@ -173,5 +173,98 @@ footer {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
+  html {
+    display: flex;
+    justify-content: center;
+  }
+  body {
+    max-width: 1200px;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+  #popular-products ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #popular-products li {
+    display: flex;
+    flex: 1 1 300px;
+    margin: 1rem;
+  }
+  #popular-products article {
+    max-width: 350px;
+    flex-grow: 1;
+    margin: auto;
+  }
+
+  .normal {
+    max-width: 386px;
+    width: 100%;
+  }
+  .large {
+    max-width: 864px;
+    width: 100%;
+  }
+  .small {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  #category-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #category-cards li {
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #kategori1 {
+    background-image: url("../media/bread-2218233_1280.jpg");
+  }
+  #kategori2 {
+    background-image: url("../media/strawberry-1330459_1280.jpg");
+  }
+  #kategori3 {
+    background-image: url("../media/hotel-1330847_1280.jpg");
+  }
+  #kategori4 {
+    background-image: url("../media/key-1504422_1280.jpg");
+  }
+  #kategori5 {
+    background-image: url("../media/white-wine-3185558_1280.jpg");
+  }
+
+  #anmeldelser ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1rem;
+    article {
+      max-width: 289px;
+    }
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    #company {
+      width: 100%;
+    }
+  }
 }
