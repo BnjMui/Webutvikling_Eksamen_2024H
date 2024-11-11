@@ -4,25 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product page</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!--Font Awesome library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <input id="search" type="text" placeholder="Søk her..." />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </ul>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="index.html#popular-products">Produkter</a></li>
+          <li>
+            <h1><a href="index.html">Logo</a></h1>
+          </li>
+          <li><a href="index.html#popular-categories">Kategorier</a></li>
+          <li><a href="#kontakt">Kontakt oss</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="checkout.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <nav id="breadcrumb">
-        <a href="index.html">Hjem</a>
-        <a href="#popular-products">Kategori</a>
-        <a href="">ProduktNavn</a>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="#popular-products">Kategori</a></li>
+          <li><a href="">ProduktNavn</a></li>
+        </ul>
       </nav>
 
       <section id="pictures">
-        <img src="https://picsum.photos/200/300" alt="" />
-        <img src="https://picsum.photos/200/300" alt="" />
-        <img src="https://picsum.photos/200/300" alt="" />
-        <img src="https://picsum.photos/500/700" alt="" />
+        <img src="https://picsum.photos/1920/1800" alt="" />
+        <img src="https://picsum.photos/1920/1800" alt="" />
+        <img src="https://picsum.photos/1920/1800" alt="" />
+        <img src="https://picsum.photos/1920/1800" alt="" />
       </section>
       <section id="information">
         <h1>ProduktNavn</h1>
         <a href="#">Merkenavn</a>
-        <p>Pris: 852NOK</p>
+        <p>852 kr inkl. mva.</p>
         <p>Farge: <span class="bold">Beige</span></p>
         <select name="size" id="size">
           <option value="">Størrelse 1</option>
@@ -34,30 +72,92 @@
       </section>
       <aside>
         <h2>Lignende produkter</h2>
-        <ul>
+        <ul class="product-card-grouping">
           <li>
-            <img src="https://picsum.photos/200/300" alt="" />
+            <img src="https://picsum.photos/1920/1800" alt="" />
             <h3>Produktnavn</h3>
             <p>Pris: 852NOK</p>
           </li>
           <li>
-            <img src="https://picsum.photos/200/300" alt="" />
+            <img src="https://picsum.photos/1920/1800" alt="" />
             <h3>Produktnavn</h3>
             <p>Pris: 852NOK</p>
           </li>
           <li>
-            <img src
-            ="https://picsum.photos/200/300" alt="" />
+            <img src="https://picsum.photos/1920/1800" alt="" />
             <h3>Produktnavn</h3>
             <p>Pris: 852NOK</p>
           </li>
           <li>
-            <img src
-            ="https://picsum.photos/200/300" alt="" />
+            <img src="https://picsum.photos/1920/1800" alt="" />
             <h3>Produktnavn</h3>
             <p>Pris: 852NOK</p>
           </li>
+        </ul>
       </aside>
     </main>
+    <footer>
+      <section id="company">
+        <a href="index.html"><h1>LOGO</h1></a>
+        <p>Virksomhetens slagord</p>
+      </section>
+      <section id="kontakt">
+        <h2>Kontakt oss</h2>
+        <ul>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Adresse:</h3>
+            <p>B R A Veien 4, Halden</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <h3>Telefon:</h3>
+            <p>123 45 678</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <h3>E-post:</h3>
+            <p>hiof@skole.no</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <h3>Åpningstider:</h3>
+            <p>Stenger 15:00</p>
+          </li>
+        </ul>
+      </section>
+      <section id="snarveier">
+        <h2>Snarveier</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">Hjem</a>
+            </li>
+            <li><a href="product.html">Produkter</a></li>
+            <li><a href="index.html#popular-categories">Kategorier</a></li>
+            <li><a href="#kontakt">Kontakt oss</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section id="some">
+        <h2>Sosiale medier</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </footer>
   </body>
 </html>

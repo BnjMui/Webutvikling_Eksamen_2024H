@@ -4,8 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CheckoutPage</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!--Font Awesome library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <input id="search" type="text" placeholder="Søk her..." />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </ul>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="#popular-products">Produkter</a></li>
+          <li>
+            <h1><a href="index.html">Logo</a></h1>
+          </li>
+          <li><a href="#popular-categories">Kategorier</a></li>
+          <li><a href="#kontakt">Kontakt oss</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="checkout.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section id="shoppingbagen">
         <h2>Handlekurv</h2>
@@ -38,11 +74,31 @@
       </section>
       <section id="personopplysninger">
         <h2>Personopplysninger</h2>
-        <form action="">
-          <label for="fornavn">Fornavn:</label><input type="text" />
-          <label for="etternavn">Etternavn:</label><input type="text" />
-          <label for="adresse">Gateadresse</label><input type="text" />
-          <label for="postnummer"></label><input type="text" id="postnummer" />
+        <form>
+          <input
+            type="text"
+            name="fornavn"
+            id="fornavn"
+            placeholder="Fornavn"
+          />
+          <input
+            type="text"
+            name="etternavn"
+            id="etternavn"
+            placeholder="Etternavn"
+          />
+          <input
+            type="text"
+            name="adresse"
+            id="adresse"
+            placeholder="Gateadresse"
+          />
+          <input
+            type="number"
+            name="postnummer"
+            id="postnummer"
+            placeholder="Postnummer"
+          />
           <button>Lagre</button>
           <button>Avbryt</button>
         </form>
@@ -50,24 +106,50 @@
       <section id="levering">
         <h2>Levering</h2>
         <form>
-          <label for="ekspress-hjem">Ekspresslevering hjem</label>
-          <input id="ekspress-hjem" type="radio" />
-          <label for="ekspress-pakke">Ekspresslevering utleveringssted</label>
-          <input id="ekspress-pakke" type="radio" />
-          <label for="standard">Standard hjemmelevering</label>
-          <input id="standard" type="radio" />
+          <!--Bruker en uordnetliste(ul) her.
+          Men kunne også brukt en div rundt input og label som hører sammen for å få de inline.-->
+          <ul>
+            <li>
+              <input id="ekspress-hjem" type="radio" name="levering" />
+              <label for="ekspress-hjem">Ekspresslevering hjem</label>
+            </li>
+            <li>
+              <input id="ekspress-pakke" type="radio" name="levering" />
+              <label for="ekspress-pakke"
+                >Ekspresslevering utleveringssted</label
+              >
+            </li>
+            <li>
+              <input id="standard" type="radio" name="levering" />
+              <label for="standard">Standard hjemmelevering</label>
+            </li>
+          </ul>
         </form>
       </section>
       <section id="betaling">
         <h2>Betaling</h2>
         <form>
-          <label for="kortnummer">Kortnummer</label>
-          <input type="text" id="kortnummer" />
-          <label for="utlopsdato">Utløpsdato</label>
-          <input type="text" id="utlopsdato" />
-          <label for="cvv">CVC/CVV</label>
-          <input type="text" id="cvv" />
-          <p>Å betale inkludert mva.</p>
+          <ul>
+            <li>
+              <label for="kortnummer">Kortnummer</label>
+              <input
+                type="number"
+                id="kortnummer"
+                placeholder="1234 5678 **** 3456"
+                name="kortnummer"
+              />
+            </li>
+            <li>
+              <label for="utlopsdato">Utløpsdato</label>
+              <input type="date" name="utlopsdato" id="utlopsdato" />
+            </li>
+            <li>
+              <label for="cvv">CVC/CVV</label>
+              <input type="number" name="cvv" id="cvv" placeholder="123" />
+            </li>
+          </ul>
+
+          <p>Å betale inkl. mva.</p>
           <p>2 556.00 NOK</p>
           <button>Fullfør kjøp</button>
           <p>
@@ -76,10 +158,16 @@
             å heve eller avslutte avtaleforholdet dersom det foreligger uriktige
             eller ufullstendige opplysninger.
           </p>
-          <label for="terms">Ja, jeg godrar vilkårene</label>
-          <input id="terms" type="checkbox" />
-          <label for="newsletter">Ja takk! send nyhetsbrev til meg</label>
-          <input type="checkbox" id="newsletter" />
+          <ul id="terms">
+            <li>
+              <input id="terms" type="checkbox" />
+              <label for="terms">Ja, jeg godrar vilkårene</label>
+            </li>
+            <li>
+              <input type="checkbox" id="newsletter" />
+              <label for="newsletter">Ja takk! send nyhetsbrev til meg</label>
+            </li>
+          </ul>
         </form>
       </section>
     </main>

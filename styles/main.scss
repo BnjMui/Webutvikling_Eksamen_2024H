@@ -1,0 +1,177 @@
+@use "reset";
+@use "buttons";
+body {
+  font-family: sans-serif;
+  padding: 1rem;
+}
+.bold {
+  font-weight: bold;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+input,
+button {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 0.5rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  li {
+    margin: 0.5rem 0;
+  }
+}
+section {
+  margin: 2rem 0;
+}
+/* Index.html */
+
+#banner {
+  background-color: lightgray;
+  text-align: right;
+  padding: 2rem 0.5rem 2rem 3rem;
+  h2,
+  p {
+    margin: 1rem 0;
+  }
+  a {
+    background-color: #fefefe;
+    padding: 0.5rem;
+  }
+}
+
+#popular-products {
+  #buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+  button {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1rem;
+    cursor: pointer;
+  }
+}
+.product-card-grouping {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  h3,
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+#popular-categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    min-height: 200px;
+  }
+}
+#anmeldelser {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  article {
+    border: 1px solid black;
+    padding: 1rem;
+    img {
+      max-width: 150px;
+      height: auto;
+    }
+  }
+}
+/* Product.html */
+
+#breadcrumb {
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+  ul > li::after {
+    content: " >";
+    margin-left: 0.5rem;
+  }
+  ul > li:last-child::after {
+    content: "";
+  }
+}
+/* ::after pseudo selektorene er noe jeg er lite kjent med fra før av, og spesielt "content" attributet. Dette krevde et par googlesøk for å finne, og for å forstå hvordan det fungerte.
+Dette måtte jeg søke etter på nettet og kommenterer derfor dette i koden.
+Koden under fungerer på denne måten, ul > li::after velger alle barneelementer av typen li som er direkte under ul elementet.
+content: " >"; setter inn en pil etter hvert element som er valgt, ettersom at vi brukte selektoren ::after her. (hadde jeg brukt ::before ville pilene ha kommet på starten i steden, og koden ville ha blitt "speilvendt").
+den siste selektoren sier i bunn og grunn at det siste barneelementet ikke skal ha en pil etter seg.
+kommenterer dette ettersom jeg ikke er sikker på i hvilken grad disse selektorene har blitt brukt i kurset.
+Link til siden jeg fant informasjonen på: https://developer.mozilla.org/en-US/docs/Web/CSS/::after
+  */
+
+#information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  button {
+    width: fit-content;
+    background-color: green;
+    color: white;
+    padding: 1rem;
+  }
+}
+aside article {
+  width: 100%;
+}
+
+/* checkout.html */
+#personopplysninger form,
+#betaling form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  input {
+    width: 100%;
+    padding: 1rem;
+  }
+  ul {
+    margin-bottom: 2rem;
+  }
+}
+
+#personopplysninger input {
+  margin: 0.5rem 0;
+}
+#terms li input {
+  width: auto;
+}
+/* Footer */
+footer {
+  border-top: solid 1px rgba(0, 0, 0, 0.5);
+  h2 {
+    margin: 1rem 0;
+  }
+  li {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+}
