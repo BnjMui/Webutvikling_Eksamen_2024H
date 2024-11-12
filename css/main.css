@@ -170,11 +170,13 @@ main section {
   content: "";
 }
 
-aside span {
+aside {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
 }
-aside span a {
+aside a {
   text-decoration: none;
 }
 
@@ -213,8 +215,13 @@ aside article {
 }
 #shoppingbagen ul select,
 #shoppingbagen ul input {
-  height: 1.5rem;
-  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  width: 4rem;
+}
+#shoppingbagen ul select {
+  background-color: lightgrey;
 }
 
 #personopplysninger form,
@@ -286,13 +293,15 @@ footer li {
     width: 100%;
     justify-content: space-between;
   }
-  header nav ul {
+  header nav ul,
+  header nav span {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-  header nav ul li {
+  header nav ul li,
+  header nav span li {
     padding: 1rem;
   }
   .product-card-grouping {
@@ -373,20 +382,25 @@ footer li {
   }
   #shoppingbagen ul article {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
   }
   #shoppingbagen ul article img {
+    display: inline;
     width: 100%;
     height: auto;
     max-width: 300px;
   }
-  #shoppingbagen ul article .info {
-    width: 70%;
+  #shoppingbagen ul article h3,
+  #shoppingbagen ul article p,
+  #shoppingbagen ul article input,
+  #shoppingbagen ul article label,
+  #shoppingbagen ul article select {
+    display: inline;
   }
-  #shoppingbagen ul article .info span {
+  #shoppingbagen ul article span {
     margin-bottom: 2rem;
+    height: 100%;
   }
   #betaling form,
   #personopplysninger form fieldset {

@@ -14,10 +14,10 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <span>
           <input id="search" type="text" placeholder="Søk her..." />
           <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </ul>
+        </span>
         <ul>
           <li><a href="index.html">Hjem</a></li>
           <li><a href="#popular-products">Produkter</a></li>
@@ -49,20 +49,26 @@
           <li>
             <article>
               <img src="https://picsum.photos/400/600" alt="" />
-              <span class="info">
-                <h3>Produktnavn</h3>
-                <p>Pris: 852NOK</p>
-                <p>Farge: Rød</p>
-                <label for="storrelse">Størrelse</label>
-                <select name="storrelse" id="storrelse">
-                  <option value="">S</option>
-                  <option value="">M</option>
-                  <option value="">L</option>
-                  <option value="">XL</option>
-                </select>
-                <label for="antall">Antall</label>
-                <input type="number" name="antall" id="antall" value="1" />
-              </span>
+
+              <ul>
+                <li>
+                  <h3>Produktnavn</h3>
+                </li>
+                <li><p>Pris: 852NOK</p></li>
+                <li><p>Farge: Rød</p></li>
+                <li>
+                  <label for="storrelse1">Størrelse</label
+                  ><select name="storrelse" id="storrelse1">
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                  </select>
+                  <label for="antall1">Antall</label>
+                  <input type="number" name="antall" id="antall1" value="1" />
+                </li>
+              </ul>
+
               <span>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -72,20 +78,24 @@
           <li>
             <article>
               <img src="https://picsum.photos/400/600" alt="" />
-              <span class="info">
-                <h3>Produktnavn</h3>
-                <p>Pris: 852NOK</p>
-                <p>Farge: Rød</p>
-                <label for="storrelse">Størrelse</label>
-                <select name="storrelse" id="storrelse">
-                  <option value="">S</option>
-                  <option value="">M</option>
-                  <option value="">L</option>
-                  <option value="">XL</option>
-                </select>
-                <label for="antall">Antall</label>
-                <input type="number" name="antall" id="antall" value="1" />
-              </span>
+              <ul>
+                <li>
+                  <h3>Produktnavn</h3>
+                </li>
+                <li><p>Pris: 852NOK</p></li>
+                <li><p>Farge: Rød</p></li>
+                <li>
+                  <label for="storrelse2">Størrelse</label
+                  ><select name="storrelse" id="storrelse2">
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                  </select>
+                  <label for="antall2">Antall</label>
+                  <input type="number" name="antall" id="antall2" value="1" />
+                </li>
+              </ul>
               <span>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -95,20 +105,24 @@
           <li>
             <article>
               <img src="https://picsum.photos/400/600" alt="" />
-              <span class="info">
-                <h3>Produktnavn</h3>
-                <p>Pris: 852NOK</p>
-                <p>Farge: Rød</p>
-                <label for="storrelse">Størrelse</label>
-                <select name="storrelse" id="storrelse">
-                  <option value="">S</option>
-                  <option value="">M</option>
-                  <option value="">L</option>
-                  <option value="">XL</option>
-                </select>
-                <label for="antall">Antall</label>
-                <input type="number" name="antall" id="antall" value="1" />
-              </span>
+              <ul>
+                <li>
+                  <h3>Produktnavn</h3>
+                </li>
+                <li><p>Pris: 852NOK</p></li>
+                <li><p>Farge: Rød</p></li>
+                <li>
+                  <label for="storrelse3">Størrelse</label
+                  ><select name="storrelse" id="storrelse3">
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                  </select>
+                  <label for="antall3">Antall</label>
+                  <input type="number" name="antall" id="antall3" value="1" />
+                </li>
+              </ul>
               <span>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-trash"></i>
@@ -259,8 +273,8 @@
           </p>
           <ul id="terms">
             <li>
-              <input id="terms" type="checkbox" />
-              <label for="terms">Ja, jeg godrar vilkårene</label>
+              <input id="terms-box" type="checkbox" />
+              <label for="terms-box">Ja, jeg godrar vilkårene</label>
             </li>
             <li>
               <input type="checkbox" id="newsletter" />
