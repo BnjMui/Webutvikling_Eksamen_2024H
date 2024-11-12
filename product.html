@@ -51,47 +51,99 @@
         </ul>
       </nav>
 
-      <section id="pictures">
-        <img src="https://picsum.photos/1920/1800" alt="" />
-        <img src="https://picsum.photos/1920/1800" alt="" />
-        <img src="https://picsum.photos/1920/1800" alt="" />
-        <img src="https://picsum.photos/1920/1800" alt="" />
-      </section>
-      <section id="information">
-        <h1>ProduktNavn</h1>
-        <a href="#">Merkenavn</a>
-        <p>852 kr inkl. mva.</p>
-        <p>Farge: <span class="bold">Beige</span></p>
-        <select name="size" id="size">
-          <option value="">Størrelse 1</option>
-          <option value="">Størrelse 2</option>
-          <option value="">Størrelse 3</option>
-          <option value="">Størrelse 4</option>
-        </select>
-        <button>Legg til i handlekurv</button>
-      </section>
+      <div id="product-container">
+        <section id="pictures">
+          <img src="https://picsum.photos/1920/1800" alt="" />
+          <img src="https://picsum.photos/1920/1800" alt="" />
+          <img src="https://picsum.photos/1920/1800" alt="" />
+          <img src="https://picsum.photos/1920/1800" alt="" />
+        </section>
+        <section id="information">
+          <h1>ProduktNavn</h1>
+          <a href="#">Merkenavn</a>
+          <p>852 kr inkl. mva.</p>
+          <p>Farge: <span class="bold">Beige</span></p>
+          <select name="size" id="size">
+            <option value="">Størrelse 1</option>
+            <option value="">Størrelse 2</option>
+            <option value="">Størrelse 3</option>
+            <option value="">Størrelse 4</option>
+          </select>
+          <span>
+            <button>Legg til i handlekurv</button>
+            <button class="favorite">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </span>
+        </section>
+      </div>
       <aside>
-        <h2>Lignende produkter</h2>
+        <span>
+          <h2>Lignende produkter</h2>
+          <a href="#"
+            >Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </span>
         <ul class="product-card-grouping">
           <li>
-            <img src="https://picsum.photos/1920/1800" alt="" />
-            <h3>Produktnavn</h3>
-            <p>Pris: 852NOK</p>
+            <article class="product-card">
+              <img src="https://picsum.photos/1920/1800" alt="" />
+              <h3>Produktnavn</h3>
+              <p>Kr 852</p>
+              <span
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p>842 Reviews</p>
+              </span>
+            </article>
           </li>
           <li>
-            <img src="https://picsum.photos/1920/1800" alt="" />
-            <h3>Produktnavn</h3>
-            <p>Pris: 852NOK</p>
+            <article class="product-card">
+              <img src="https://picsum.photos/1920/1800" alt="" />
+              <h3>Produktnavn</h3>
+              <p>Kr 852</p>
+              <span
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p>842 Reviews</p>
+              </span>
+            </article>
           </li>
           <li>
-            <img src="https://picsum.photos/1920/1800" alt="" />
-            <h3>Produktnavn</h3>
-            <p>Pris: 852NOK</p>
+            <article class="product-card">
+              <img src="https://picsum.photos/1920/1800" alt="" />
+              <h3>Produktnavn</h3>
+              <p>Kr 852</p>
+              <span
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p>842 Reviews</p>
+              </span>
+            </article>
           </li>
           <li>
-            <img src="https://picsum.photos/1920/1800" alt="" />
-            <h3>Produktnavn</h3>
-            <p>Pris: 852NOK</p>
+            <article class="product-card">
+              <img src="https://picsum.photos/1920/1800" alt="" />
+              <h3>Produktnavn</h3>
+              <p>Kr 852</p>
+              <span
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p>842 Reviews</p>
+              </span>
+            </article>
           </li>
         </ul>
       </aside>

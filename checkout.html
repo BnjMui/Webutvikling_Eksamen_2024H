@@ -48,26 +48,71 @@
         <ul>
           <li>
             <article>
-              <img src="https://picsum.photos/200/300" alt="" />
-              <h3>Produktnavn</h3>
-              <p>Pris: 852NOK</p>
-              <p>Farge: Rød</p>
+              <img src="https://picsum.photos/400/600" alt="" />
+              <span class="info">
+                <h3>Produktnavn</h3>
+                <p>Pris: 852NOK</p>
+                <p>Farge: Rød</p>
+                <label for="storrelse">Størrelse</label>
+                <select name="storrelse" id="storrelse">
+                  <option value="">S</option>
+                  <option value="">M</option>
+                  <option value="">L</option>
+                  <option value="">XL</option>
+                </select>
+                <label for="antall">Antall</label>
+                <input type="number" name="antall" id="antall" value="1" />
+              </span>
+              <span>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-trash"></i>
+              </span>
             </article>
           </li>
           <li>
             <article>
-              <img src="https://picsum.photos/200/300" alt="" />
-              <h3>Produktnavn</h3>
-              <p>Pris: 852NOK</p>
-              <p>Farge: Rød</p>
+              <img src="https://picsum.photos/400/600" alt="" />
+              <span class="info">
+                <h3>Produktnavn</h3>
+                <p>Pris: 852NOK</p>
+                <p>Farge: Rød</p>
+                <label for="storrelse">Størrelse</label>
+                <select name="storrelse" id="storrelse">
+                  <option value="">S</option>
+                  <option value="">M</option>
+                  <option value="">L</option>
+                  <option value="">XL</option>
+                </select>
+                <label for="antall">Antall</label>
+                <input type="number" name="antall" id="antall" value="1" />
+              </span>
+              <span>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-trash"></i>
+              </span>
             </article>
           </li>
           <li>
             <article>
-              <img src="https://picsum.photos/200/300" alt="" />
-              <h3>Produktnavn</h3>
-              <p>Pris: 852NOK</p>
-              <p>Farge: Rød</p>
+              <img src="https://picsum.photos/400/600" alt="" />
+              <span class="info">
+                <h3>Produktnavn</h3>
+                <p>Pris: 852NOK</p>
+                <p>Farge: Rød</p>
+                <label for="storrelse">Størrelse</label>
+                <select name="storrelse" id="storrelse">
+                  <option value="">S</option>
+                  <option value="">M</option>
+                  <option value="">L</option>
+                  <option value="">XL</option>
+                </select>
+                <label for="antall">Antall</label>
+                <input type="number" name="antall" id="antall" value="1" />
+              </span>
+              <span>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-trash"></i>
+              </span>
             </article>
           </li>
         </ul>
@@ -75,32 +120,52 @@
       <section id="personopplysninger">
         <h2>Personopplysninger</h2>
         <form>
-          <input
-            type="text"
-            name="fornavn"
-            id="fornavn"
-            placeholder="Fornavn"
-          />
-          <input
-            type="text"
-            name="etternavn"
-            id="etternavn"
-            placeholder="Etternavn"
-          />
-          <input
-            type="text"
-            name="adresse"
-            id="adresse"
-            placeholder="Gateadresse"
-          />
-          <input
-            type="number"
-            name="postnummer"
-            id="postnummer"
-            placeholder="Postnummer"
-          />
+          <fieldset>
+            <legend>Leveringsadresse</legend>
+            <input
+              type="text"
+              name="fornavn"
+              id="fornavn"
+              placeholder="Fornavn"
+            />
+            <input
+              type="text"
+              name="etternavn"
+              id="etternavn"
+              placeholder="Etternavn"
+            />
+            <input
+              type="text"
+              name="adresse"
+              id="adresse"
+              placeholder="Gateadresse"
+            />
+            <input
+              type="number"
+              name="postnummer"
+              id="postnummer"
+              placeholder="Postnummer"
+            />
+            <input
+              type="text"
+              name="poststed"
+              id="poststed"
+              placeholder="Poststed"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Kontaktinformasjon</legend>
+            <input type="email" name="epost" id="epost" placeholder="E-post" />
+            <input
+              type="tel"
+              name="telefon"
+              id="telefon"
+              placeholder="Telefon"
+            />
+          </fieldset>
+
           <button>Lagre</button>
-          <button>Avbryt</button>
+          <button id="avbryt">Avbryt</button>
         </form>
       </section>
       <section id="levering">
@@ -110,27 +175,61 @@
           Men kunne også brukt en div rundt input og label som hører sammen for å få de inline.-->
           <ul>
             <li>
-              <input id="ekspress-hjem" type="radio" name="levering" />
-              <label for="ekspress-hjem">Ekspresslevering hjem</label>
+              <span>
+                <input id="ekspress-hjem" type="radio" name="levering" />
+                <label for="ekspress-hjem" class="bold"
+                  >Ekspresslevering hjem
+                </label>
+              </span>
+              <p class="price">59 kr <i class="fa-solid fa-truck-fast"></i></p>
+              <p class="info">Forventet levering: 2-3 virkedager</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa,
+                rerum. Laborum omnis voluptas quam reprehenderit aut dolores est
+                quod placeat? Sit laborum accusamus eius sequi quidem cum rem
+                repellat ducimus?
+              </p>
             </li>
             <li>
-              <input id="ekspress-pakke" type="radio" name="levering" />
-              <label for="ekspress-pakke"
-                >Ekspresslevering utleveringssted</label
-              >
+              <span>
+                <input id="ekspress-pakke" type="radio" name="levering" />
+                <label for="ekspress-pakke" class="bold"
+                  >Ekspresslevering utleveringssted
+                </label>
+              </span>
+              <p class="price">59 kr <i class="fa-solid fa-truck-fast"></i></p>
+              <p class="info">Forventet levering: 2-3 virkedager</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa,
+                rerum. Laborum omnis voluptas quam reprehenderit aut dolores est
+                quod placeat? Sit laborum accusamus eius sequi quidem cum rem
+                repellat ducimus?
+              </p>
             </li>
             <li>
-              <input id="standard" type="radio" name="levering" />
-              <label for="standard">Standard hjemmelevering</label>
+              <span>
+                <input id="standard" type="radio" name="levering" />
+                <label for="standard" class="bold"
+                  >Standard hjemmelevering
+                </label>
+              </span>
+              <p class="price">Gratis <i class="fa-solid fa-box"></i></p>
+              <p class="info">Forventet levering: 5-7 virkedager</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa,
+                rerum. Laborum omnis voluptas quam reprehenderit aut dolores est
+                quod placeat? Sit laborum accusamus eius sequi quidem cum rem
+                repellat ducimus?
+              </p>
             </li>
           </ul>
         </form>
       </section>
       <section id="betaling">
-        <h2>Betaling</h2>
+        <h2>Betal med kort <i class="fa-solid fa-credit-card"></i></h2>
         <form>
-          <ul>
-            <li>
+          <ul class="betaling-form">
+            <li class="kort">
               <label for="kortnummer">Kortnummer</label>
               <input
                 type="number"
@@ -150,7 +249,7 @@
           </ul>
 
           <p>Å betale inkl. mva.</p>
-          <p>2 556.00 NOK</p>
+          <p id="price">2 556.00 NOK</p>
           <button>Fullfør kjøp</button>
           <p>
             Du bekrefter herved at opplysningene og dokumentene du har oppgitt
