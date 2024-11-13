@@ -2,6 +2,7 @@
 @use "buttons";
 body {
   font-family: sans-serif;
+  width: 100%;
 }
 .bold {
   font-weight: bold;
@@ -31,7 +32,7 @@ ul {
 main section {
   margin: 2rem 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 2rem 6rem;
+  padding: 2rem 2rem;
 }
 /* Index.html */
 
@@ -75,7 +76,11 @@ main section {
     display: inline;
   }
 }
-
+.product-card {
+  max-width: 350px;
+  flex-grow: 1;
+  margin: auto 1rem auto 1rem;
+}
 #popular-categories {
   display: flex;
   flex-wrap: wrap;
@@ -120,11 +125,18 @@ main section {
   article {
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
+    width: 289px;
     img {
       max-width: 150px;
       height: auto;
     }
   }
+}
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
 }
 /* Product.html */
 
@@ -147,6 +159,12 @@ aside {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  ul {
+    width: 100%;
+    article {
+      width: 289px;
+    }
+  }
   a {
     text-decoration: none;
   }
@@ -160,7 +178,7 @@ kommenterer dette ettersom jeg ikke er sikker på i hvilken grad disse selektore
 Link til siden jeg fant informasjonen på: https://developer.mozilla.org/en-US/docs/Web/CSS/::after
   */
 
-#information {
+#product-showcase {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -170,9 +188,6 @@ Link til siden jeg fant informasjonen på: https://developer.mozilla.org/en-US/d
     color: white;
     padding: 1rem;
   }
-}
-aside article {
-  width: 100%;
 }
 
 /* checkout.html */
@@ -249,13 +264,16 @@ footer {
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 650px) {
   html {
     display: flex;
     justify-content: center;
   }
   body {
     max-width: 1200px;
+  }
+  main section {
+    padding: 2rem 6rem;
   }
   header nav {
     display: flex;
@@ -282,23 +300,15 @@ footer {
     flex: 1 1 300px;
     max-width: 350px;
   }
-  .product-card {
-    max-width: 350px;
-    flex-grow: 1;
-    margin: auto 1rem auto 1rem;
-  }
 
   .normal {
     max-width: 386px;
-    width: 100%;
   }
   .large {
     max-width: 864px;
-    width: 100%;
   }
   .small {
     max-width: 300px;
-    width: 100%;
   }
 
   #category-cards {
@@ -307,14 +317,8 @@ footer {
     justify-content: center;
   }
 
-  #anmeldelser ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.1rem;
-    article {
-      max-width: 289px;
-    }
+  #anmeldelser ul article {
+    max-width: 289px;
   }
 
   /* Product.html */
@@ -341,10 +345,16 @@ footer {
       max-width: 160px;
     }
   }
-  #information {
-    max-width: 440px;
+  #product-showcase {
+    flex-direction: row;
+    article {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      flex-direction: column;
+      width: 100%;
+    }
   }
-
   /* checkout.html */
   #shoppingbagen ul {
     display: flex;
