@@ -44,13 +44,43 @@
     </header>
     <main>
       <section id="banner">
-        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis itaque
-          aperiam vitae? Eveniet non quo nam similique dolorem omnis repellendus
-          aut error illo.
-        </p>
-        <a href="#">Les mer</a>
+        <i class="fa-solid fa-arrow-right" id="arrow-right"></i>
+        <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
+        <ul class="banner-slider">
+          <li>
+            <article>
+              <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                itaque aperiam vitae? Eveniet non quo nam similique dolorem
+                omnis repellendus aut error illo.
+              </p>
+              <a href="#">Les mer</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                itaque aperiam vitae? Eveniet non quo nam similique dolorem
+                omnis repellendus aut error illo.
+              </p>
+              <a href="#">Les mer</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                itaque aperiam vitae? Eveniet non quo nam similique dolorem
+                omnis repellendus aut error illo.
+              </p>
+              <a href="#">Les mer</a>
+            </article>
+          </li>
+        </ul>
       </section>
       <section id="popular-products">
         <h2>Våre mest populære produkter</h2>
@@ -58,7 +88,7 @@
           Her kan det stå en kort beskrivelse av de mest populære produktene.
         </p>
         <ul id="buttons">
-          <li><button>Nye produkter</button></li>
+          <li><button class="active">Nye produkter</button></li>
           <li><button>Spesiell pris</button></li>
           <li><button>Best selgere</button></li>
         </ul>
@@ -67,6 +97,7 @@
           <li>
             <article class="product-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
+              <i class="fa-regular fa-heart like-btn"></i>
               <a href="product.html"><h3>Produktnavn</h3></a>
               <p>Kr 852</p>
 
@@ -82,6 +113,7 @@
           <li>
             <article class="product-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
+              <i class="fa-regular fa-heart like-btn"></i>
               <a href="product.html"><h3>Produktnavn</h3></a>
               <p>Kr 852</p>
               <p class="bold">
@@ -96,6 +128,7 @@
           <li>
             <article class="product-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
+              <i class="fa-regular fa-heart like-btn"></i>
               <a href="product.html"><h3>Produktnavn</h3></a>
               <p>Kr 852</p>
               <p class="bold">
@@ -110,6 +143,7 @@
           <li>
             <article class="product-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
+              <i class="fa-regular fa-heart like-btn"></i>
               <a href="product.html"><h3>Produktnavn</h3></a>
               <p>Kr 852</p>
               <p class="bold">
@@ -124,6 +158,7 @@
           <li>
             <article class="product-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
+              <i class="fa-regular fa-heart like-btn"></i>
               <a href="product.html"><h3>Produktnavn</h3></a>
               <p>Kr 852</p>
               <p class="bold">
@@ -138,6 +173,7 @@
           <li>
             <article class="product-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
+              <i class="fa-regular fa-heart like-btn"></i>
               <a href="product.html"><h3>Produktnavn</h3></a>
               <p>Kr 852</p>
               <p class="bold">
@@ -157,28 +193,33 @@
           Her kan det stå en kort beskrivelse av de mest populære kategoriene.
         </p>
         <ul id="category-cards">
-          <li class="normal" id="kategori1">
-            <article>
+          <li class="normal">
+            <article id="kategori1">
+              <img src="./media/bread-2218233_1280.jpg" alt="" />
               <h3>Kategori 1</h3>
             </article>
           </li>
-          <li class="normal" id="kategori2">
-            <article>
+          <li class="normal">
+            <article id="kategori2">
+              <img src="./media/hotel-1330847_1280.jpg" alt="" />
               <h3>Kategori 2</h3>
             </article>
           </li>
-          <li class="normal" id="kategori3">
-            <article>
+          <li class="normal">
+            <article id="kategori3">
+              <img src="./media/key-1504422_1280.jpg" alt="" />
               <h3>Kategori 3</h3>
             </article>
           </li>
-          <li class="large" id="kategori4">
-            <article>
+          <li class="large">
+            <article id="kategori4">
+              <img src="./media/strawberry-1330459_1280.jpg" alt="" />
               <h3>Kategori 4</h3>
             </article>
           </li>
-          <li class="small" id="kategori5">
-            <article>
+          <li class="small">
+            <article id="kategori5">
+              <img src="./media/white-wine-3185558_1280.jpg" alt="" />
               <h3>Kategori 5</h3>
             </article>
           </li>
@@ -188,8 +229,8 @@
         <h2>Anmeldelser</h2>
         <ul class="slider">
           <li>
-            <article>
-              <img src="https://picsum.photos/1920/1800" alt="" >
+            <article class="review-card">
+              <img src="https://picsum.photos/1920/1800" alt="" />
               <h3>Anmeldelse nummer 1</h3>
               <span>
                 <i class="fa-solid fa-star"></i>
@@ -205,7 +246,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="review-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
               <h3>Anmeldelse nummer 2</h3>
               <span>
@@ -222,7 +263,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="review-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
               <h3>Anmeldelse nummer 3</h3>
               <span>
@@ -239,7 +280,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="review-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
               <h3>Anmeldelse nummer 4</h3>
               <span>
@@ -256,7 +297,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="review-card">
               <img src="https://picsum.photos/1920/1800" alt="" />
               <h3>Anmeldelse nummer 5</h3>
               <span>

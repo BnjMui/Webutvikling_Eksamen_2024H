@@ -22,6 +22,7 @@
 body {
   font-family: sans-serif;
   width: 100%;
+  padding: 1rem;
 }
 
 .bold {
@@ -61,9 +62,17 @@ main section {
 
 /* Index.html */
 #banner {
+  padding: 0;
+  border-radius: 12px;
   background-color: lightgray;
+}
+#banner #arrow-left,
+#banner #arrow-right {
+  display: none;
+}
+#banner article {
   text-align: right;
-  padding: 2rem 0.5rem 2rem 3rem;
+  padding: 2rem 0.5rem 2rem 40%;
 }
 #banner h2,
 #banner p {
@@ -72,6 +81,9 @@ main section {
 #banner a {
   background-color: #fefefe;
   padding: 0.5rem;
+}
+#banner ul > :not(:first-child) {
+  display: none;
 }
 
 #popular-products #buttons {
@@ -83,8 +95,16 @@ main section {
 #popular-products button {
   background-color: transparent;
   border: 1px solid black;
+  border-radius: 12px;
   padding: 1rem;
   cursor: pointer;
+}
+#popular-products button:hover {
+  background-color: lightgrey;
+}
+#popular-products .active {
+  background-color: black;
+  color: white;
 }
 
 .product-card-grouping {
@@ -103,50 +123,57 @@ main section {
   max-width: 350px;
   flex-grow: 1;
   margin: auto 1rem auto 1rem;
+  position: relative;
+}
+.product-card img {
+  border-radius: 12px;
+}
+.product-card .like-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.product-card .like-btn:hover {
+  background-color: rgba(255, 0, 0, 0.5);
 }
 
-#popular-categories {
-  display: flex;
-  flex-wrap: wrap;
+#category-cards {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
-}
-#popular-categories ul {
   width: 100%;
 }
-#popular-categories article {
+#category-cards li {
+  min-height: 300px;
+}
+#category-cards article {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  min-height: 400px;
   color: white;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
 }
-
-#kategori1 {
-  background-image: url("../media/bread-2218233_1280.jpg");
-}
-
-#kategori2 {
-  background-image: url("../media/strawberry-1330459_1280.jpg");
-}
-
-#kategori3 {
-  background-image: url("../media/hotel-1330847_1280.jpg");
-}
-
-#kategori4 {
-  background-image: url("../media/key-1504422_1280.jpg");
-}
-
-#kategori5 {
-  background-image: url("../media/white-wine-3185558_1280.jpg");
+#category-cards article img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #category-cards li {
   margin: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 #anmeldelser {
@@ -154,14 +181,17 @@ main section {
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-#anmeldelser article {
+
+.review-card {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
   width: 289px;
+  border-radius: 12px;
 }
-#anmeldelser article img {
+.review-card img {
   max-width: 150px;
   height: auto;
+  border-radius: 12px;
 }
 
 .slider {
@@ -169,6 +199,20 @@ main section {
   flex-wrap: nowrap;
   overflow-x: auto;
   gap: 1rem;
+}
+.slider::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
+.slider::-webkit-scrollbar-button {
+  display: none;
+}
+.slider::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
 }
 
 /* Product.html */
@@ -220,6 +264,36 @@ Link til siden jeg fant informasjonen på: https://developer.mozilla.org/en-US/d
   background-color: rgb(0, 0, 0);
   color: white;
   padding: 1rem;
+}
+#product-showcase details {
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#product-showcase details summary {
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  margin: 1rem auto;
+  font-weight: 700;
+}
+#product-showcase details summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+#product-showcase details[open] summary::after {
+  content: "-";
+}
+#product-showcase details ul {
+  list-style: disc;
+  padding: 0 3rem;
+}
+#product-showcase details p {
+  margin-bottom: 1rem;
 }
 
 /* checkout.html */
@@ -308,6 +382,9 @@ footer li {
   main section {
     padding: 2rem 6rem;
   }
+  header {
+    width: 100%;
+  }
   header nav {
     display: flex;
     width: 100%;
@@ -319,10 +396,58 @@ footer li {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    max-width: 100%;
+    gap: 1rem;
   }
-  header nav ul li,
-  header nav span li {
-    padding: 1rem;
+  #banner {
+    position: relative;
+  }
+  #banner #arrow-left,
+  #banner #arrow-right {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  #banner #arrow-right {
+    right: 0;
+  }
+  #banner #arrow-left {
+    left: 0;
+  }
+  #banner ul > :not(:first-child) {
+    display: list-item;
+  }
+  #banner .banner-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  #banner .banner-slider li {
+    flex: 0 0 100%;
+  }
+  #banner .banner-slider::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    height: 7px;
+  }
+  #banner .banner-slider:hover::-webkit-scrollbar-button {
+    display: none;
+  }
+  #banner .banner-slider:hover::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  #banner .banner-slider:hover::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+  }
+  #banner article {
+    padding: 2rem 3rem 2rem 40%;
   }
   .product-card-grouping {
     display: flex;
@@ -334,21 +459,23 @@ footer li {
     flex: 1 1 300px;
     max-width: 350px;
   }
-  .normal {
-    max-width: 386px;
-  }
-  .large {
-    max-width: 864px;
-  }
-  .small {
-    max-width: 300px;
-  }
   #category-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
   }
-  #anmeldelser ul article {
+  #category-cards :nth-child(3) {
+    grid-row: 1/3;
+  }
+  #category-cards :nth-child(4) {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+  #category-cards :nth-child(5) {
+    grid-row: 3/4;
+  }
+  #category-cards #anmeldelser ul article {
     max-width: 289px;
   }
   /* Product.html */
@@ -359,8 +486,10 @@ footer li {
   }
   #pictures {
     max-width: 700px;
+    width: 100%;
+    max-height: 646px;
     display: grid;
-    grid-template-columns: repeat(3, 160px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
   }
@@ -466,5 +595,32 @@ footer li {
   }
   footer #company {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #category-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  #category-cards :nth-child(1) {
+    grid-row: 1/3;
+  }
+  #category-cards :nth-child(2) {
+    grid-row: 1/3;
+    grid-column: 2/4;
+  }
+  #category-cards :nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+  #category-cards :nth-child(4) {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+  #category-cards :nth-child(5) {
+    grid-column: 3/4;
+    grid-row: 4/5;
   }
 }/*# sourceMappingURL=main.css.map */
