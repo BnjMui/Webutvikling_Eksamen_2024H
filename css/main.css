@@ -383,9 +383,15 @@ footer li {
   body {
     max-width: 1200px;
   }
+  h2 {
+    margin-bottom: 3rem;
+  }
   button:hover,
   a:hover {
     cursor: pointer;
+  }
+  button:focus {
+    outline-color: green;
   }
   main section {
     padding: 2rem 6rem;
@@ -561,15 +567,38 @@ footer li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
+    grid-template-areas: "fornavn etternavn" "adresse adresse" "postnummer poststed";
   }
-  #personopplysninger form fieldset #adresse {
-    grid-column: 1/3;
+  #personopplysninger form fieldset input {
+    margin: 1rem 0 0 0;
   }
-  #personopplysninger form fieldset #epost {
-    grid-column: 1/3;
+  #personopplysninger form fieldset #fornavn,
+  #personopplysninger form fieldset label[for=fornavn] {
+    grid-area: fornavn;
   }
-  #personopplysninger form fieldset #telefon {
-    grid-column: 1/3;
+  #personopplysninger form fieldset #etternavn,
+  #personopplysninger form fieldset label[for=etternavn] {
+    grid-area: etternavn;
+  }
+  #personopplysninger form fieldset #adresse,
+  #personopplysninger form fieldset label[for=adresse] {
+    grid-area: adresse;
+  }
+  #personopplysninger form fieldset #postnummer,
+  #personopplysninger form fieldset label[for=postnummer] {
+    grid-area: postnummer;
+  }
+  #personopplysninger form fieldset #poststed,
+  #personopplysninger form fieldset label[for=poststed] {
+    grid-area: poststed;
+  }
+  #personopplysninger form fieldset #epost,
+  #personopplysninger form fieldset label[for=epost] {
+    grid-area: fornavn;
+  }
+  #personopplysninger form fieldset #telefon,
+  #personopplysninger form fieldset label[for=telefon] {
+    grid-area: etternavn;
   }
   #personopplysninger form fieldset button {
     grid-column: 1/3;
