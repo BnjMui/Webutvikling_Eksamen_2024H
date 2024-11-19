@@ -99,9 +99,6 @@ main section {
   padding: 1rem;
   cursor: pointer;
 }
-#popular-products button:hover {
-  background-color: lightgrey;
-}
 #popular-products .active {
   background-color: black;
   color: white;
@@ -137,6 +134,7 @@ main section {
   border-radius: 50%;
 }
 .product-card .like-btn:hover {
+  cursor: pointer;
   background-color: rgba(255, 0, 0, 0.5);
 }
 
@@ -258,12 +256,18 @@ Link til siden jeg fant informasjonen på: https://developer.mozilla.org/en-US/d
   flex-direction: column;
   gap: 0.5rem;
 }
+#product-showcase article select {
+  font-size: 1rem;
+}
 #product-showcase button {
   width: -moz-fit-content;
   width: fit-content;
   background-color: rgb(0, 0, 0);
   color: white;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+#product-showcase span {
+  width: 100%;
 }
 #product-showcase details {
   padding: 1rem;
@@ -379,6 +383,10 @@ footer li {
   body {
     max-width: 1200px;
   }
+  button:hover,
+  a:hover {
+    cursor: pointer;
+  }
   main section {
     padding: 2rem 6rem;
   }
@@ -448,6 +456,10 @@ footer li {
   }
   #banner article {
     padding: 2rem 3rem 2rem 40%;
+  }
+  #popular-products #buttons button:hover {
+    background-color: lightgrey;
+    color: black;
   }
   .product-card-grouping {
     display: flex;

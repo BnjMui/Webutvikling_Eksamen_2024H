@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Butikkhjemmeside som viser frem diverse produkter, kategorier og anmeldelser"
+    />
     <title>Homepage</title>
     <link rel="stylesheet" href="./css/main.css" />
     <!--Font Awesome library-->
@@ -12,11 +16,13 @@
     />
   </head>
   <body>
-    <header>
+    <header itemscope itemtype="http://schema.org/WPHeader">
       <nav>
         <span>
           <input id="search" type="text" placeholder="Søk her..." />
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button name="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </span>
         <ul>
           <li><a href="index.html">Hjem</a></li>
@@ -43,7 +49,7 @@
       </nav>
     </header>
     <main>
-      <section id="banner">
+      <section id="banner" itemscope itemtype="https://schema.org/Poster">
         <i class="fa-solid fa-arrow-right" id="arrow-right"></i>
         <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
         <ul class="banner-slider">
@@ -82,21 +88,35 @@
           </li>
         </ul>
       </section>
-      <section id="popular-products">
+      <section
+        id="popular-products"
+        itemscope
+        itemtype="http://schema.org/ItemList"
+      >
         <h2>Våre mest populære produkter</h2>
         <p>
           Her kan det stå en kort beskrivelse av de mest populære produktene.
         </p>
         <ul id="buttons">
-          <li><button class="active">Nye produkter</button></li>
-          <li><button>Spesiell pris</button></li>
-          <li><button>Best selgere</button></li>
+          <li>
+            <button name="Vis Nye produkter" class="active">
+              Nye produkter
+            </button>
+          </li>
+          <li>
+            <button name="Vis produkter med spesiell pris">
+              Spesiell pris
+            </button>
+          </li>
+          <li>
+            <button name="Vis best selgende produkter">Best selgere</button>
+          </li>
         </ul>
 
         <ul class="product-card-grouping">
           <li>
             <article class="product-card">
-              <img src="https://picsum.photos/1920/1800" alt="" />
+              <img src="https://picsum.photos/1920/1800" alt="Produktbilde" />
               <i class="fa-regular fa-heart like-btn"></i>
               <a href="product.html"><h3>Produktnavn</h3></a>
               <p>Kr 852</p>
@@ -364,16 +384,24 @@
         <nav>
           <ul>
             <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+              <a href="https://no.pinterest.com/"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
             </li>
           </ul>
         </nav>

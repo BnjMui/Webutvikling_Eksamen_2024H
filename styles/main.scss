@@ -1,5 +1,6 @@
 @use "reset";
 @use "buttons";
+
 body {
   font-family: sans-serif;
   width: 100%;
@@ -76,9 +77,6 @@ main section {
     border-radius: 12px;
     padding: 1rem;
     cursor: pointer;
-    &:hover {
-      background-color: lightgrey;
-    }
   }
   .active {
     background-color: black;
@@ -113,6 +111,7 @@ main section {
     padding: 0.5rem;
     border-radius: 50%;
     &:hover {
+      cursor: pointer;
       background-color: rgba(255, 0, 0, 0.5);
     }
   }
@@ -257,11 +256,19 @@ Link til siden jeg fant informasjonen på: https://developer.mozilla.org/en-US/d
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  article {
+    select {
+      font-size: 1rem;
+    }
+  }
   button {
     width: fit-content;
     background-color: rgb(0, 0, 0);
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
+  }
+  span {
+    width: 100%;
   }
   details {
     padding: 1rem;
@@ -380,6 +387,10 @@ footer {
   body {
     max-width: 1200px;
   }
+  button:hover,
+  a:hover {
+    cursor: pointer;
+  }
   main section {
     padding: 2rem 6rem;
   }
@@ -450,6 +461,14 @@ footer {
     }
     article {
       padding: 2rem 3rem 2rem 40%;
+    }
+  }
+  #popular-products {
+    #buttons button {
+      &:hover {
+        background-color: lightgrey;
+        color: black;
+      }
     }
   }
 
