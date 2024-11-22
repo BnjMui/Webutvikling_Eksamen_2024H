@@ -1,5 +1,9 @@
-@use "reset";
-@use "buttons";
+//Css reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: sans-serif;
@@ -8,6 +12,17 @@ body {
 }
 .bold {
   font-weight: bold;
+}
+#personopplysninger button,
+#betaling button {
+  background-color: rgb(63, 63, 63);
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0px;
+}
+#avbryt {
+  text-decoration: underline;
 }
 img {
   width: 100%;
